@@ -68,3 +68,11 @@ select buyer_id from Sales s
     join Product p on p.product_id = s.product_id
     where p.product_name = 'iPhone'
 )
+
+
+
+select p.company , so.buyer_id
+from phone p
+join sold so
+on p.id = so.id 
+where p.company = 'S8' and p.company != 'iphone';
